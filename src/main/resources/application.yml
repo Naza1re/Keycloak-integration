@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: user-client
+            client-secret: Ol5he5el5feSDteBSqRtlskhcd1pD2ma
+            scope: openid, profile
+            authorization-grant-type: authorization_code
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8180/auth/realms/user-realm
+            user-name-attribute: preferred_username
+keycloak:
+  server-url: http://localhost:8180/auth
+  realm: user-realm
+  username: admin
+  password: adminpass
